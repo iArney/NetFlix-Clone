@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>user-mode</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        main {
+            position: relative;
+        }
+        
+        body {
+            font-family: Nanito Sans;
+            background-color: #000 !important;
+        }
+        
+        header {
+            color: var(--main-white);
+            height: 100vh;
+            min-height: 47em;
+            max-height: 47em;
+            background: url("../images/MoviePoster.png") !important;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- nav -->
+        <div class="nav-bg">
+            <nav>
+                <div class="logo" onclick="location.href='../index.html'">
+                    <img src="../images/NetflixLogoSvg (copy).svg" alt="Logo" />
+                </div>
+                <!-- humbuger menu -->
+                <div class="humbuger" id="openLines" onclick="openNav() ">
+                    <div class="lines"></div>
+                    <div class="lines"></div>
+                    <div class="lines"></div>
+                </div>
+
+                <!-- humburger menu / -->
+
+                <!-- links -->
+                <div class="nav-links">
+                    <ul>
+                        <li><b> Ana Sayfa</b></li>
+                        <li>Diziler</li>
+                        <li>Filmler</li>
+                        <li>Yeni ve Popüler</li>
+                        <li>Listem</li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- side nav -->
+            <div class="side-nav" id="sideNav">
+                <div class="logo" onclick="location.href='../index.html'">
+                    <img src="../images/NetflixLogoSvg (copy).svg" alt="Logo" />
+                    <div class="close" onclick="closeNav() ">
+                        <p>&times;</p>
+                    </div>
+                </div>
+
+                <div class="user-action">
+                    <div class="language">English</div>
+                </div>
+            </div>
+            <div class="side-nav2" id="sideNav2"></div>
+            <!-- side nav ends -->
+            <!-- form starts -->
+        </div>
+        <!-- nav -->
+
+        <div class="header-items">
+            <div class="movie-name">
+                <div class="head"><img src="../images/MovieName.svg" alt="" /></div>
+            </div>
+            <div class="osvg">
+                <div class="icon">
+                    <img src="../images/Top10Badge.svg" alt="top10" />
+                </div>
+                <div class="icon-info">Türkiye’de Bugün 4 Numara</div>
+            </div>
+            <div class="btn-content">
+                <div class="text-items">
+                    <p>
+                        Küçük yaşta başının çaresine bakmayı öğrenen ve çok
+                        <span class="span-break">çalışarak iş dünyasında önemli bir konuma gelen Emir,</span
+              >
+              <span class="span-break">
+                bir gün sokak şarkıcısı bir kızla karşılaşır ve hayatı</span
+              ><span class="span-break"> değişir.</span>
+                    </p>
+                </div>
+                <div class="hero">
+                    <div class="hero-btn">
+                        <button>
+                <div><img src="../images/play.svg" alt="icon" /></div>
+                <div>Daha Fazla Bilgi</div>
+              </button>
+                    </div>
+                    <div class="hero-btn">
+                        <button id="btn2">
+                <div><img src="../images/info.svg" alt="icon" /></div>
+                <div>Daha Fazla Bilgi</div>
+              </button>
+                    </div>
+                </div>
+                <div class="netflix-populae">
+                    <b>Netflix'te Popüler</b>
+                </div>
+            </div>
+
+            <div class="horizontal-items" id="scrollbar">
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+            </div>
+            <!-- arrow -->
+            <div class="arrow" onclick="slideRight()">
+                <img src="../images/right-arrow.svg" alt="right" />
+            </div>
+            <div class="arrow-left" onclick="slideLeft()">
+                <img src="../images/arrow-left.webp" alt="left" />
+            </div>
+            <div class="darken"></div>
+            <div class="darken-left"></div>
+            <!-- arrow / -->
+        </div>
+    </header>
+
+    <main class="overflow">
+        <div class="lists">
+            <div class="list-name"><b> Gündemdekiler</b></div>
+            <div class="horizontal-items sub-movies" id="scrollbar1">
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+            </div>
+            <!-- arrow -->
+            <div class="arrow1" onclick="slideRight1()">
+                <img src="../images/right-arrow.svg" alt="right" />
+            </div>
+            <div class="arrow-left1" onclick="slideLeft1()">
+                <img src="../images/arrow-left.webp" alt="left" />
+            </div>
+            <div class="darken1"></div>
+            <div class="darken-left1"></div>
+            <!-- arrow / -->
+        </div>
+
+        <!-- list 2 -->
+        <div class="lists-card">
+            <div class="list-name"><b> Gündemdekiler</b></div>
+            <div class="horizontal-items sub-movies" id="scrollbar2">
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+            </div>
+            <!-- arrow -->
+            <div class="arrow1" onclick="slideRight2()">
+                <img src="../images/right-arrow.svg" alt="right" />
+            </div>
+            <div class="arrow-left1" onclick="slideLeft2()">
+                <img src="../images/arrow-left.webp" alt="left" />
+            </div>
+            <div class="darken1"></div>
+            <div class="darken-left1"></div>
+            <!-- arrow / -->
+        </div>
+
+        <!-- list 3 - the verticals -->
+        <div class="lists-card">
+            <div class="list-name"><b> Gündemdekiler</b></div>
+            <div class="horizontal-items sub-movies verticals" id="scrollbar3">
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+            </div>
+            <!-- arrow -->
+            <div class="arrow2" onclick="slideRight3()">
+                <img src="../images/right-arrow.svg" alt="right" />
+            </div>
+            <div class="arrow-left2" onclick="slideLeft3()">
+                <img src="../images/arrow-left.webp" alt="left" />
+            </div>
+            <div class="darken2"></div>
+            <div class="darken-left2"></div>
+            <!-- arrow / -->
+        </div>
+
+        <div class="other-movies">
+            <!-- list 4 -->
+            <div class="lists-card1">
+                <div class="list-name"><b> Gündemdekiler</b></div>
+                <div class="card4 horizontal-items sub-movies" id="scrollbar4">
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                </div>
+                <!-- arrow -->
+                <div class="arrow1" onclick="slideRight4()">
+                    <img src="../images/right-arrow.svg" alt="right" />
+                </div>
+                <div class="arrow-left1" onclick="slideLeft4()">
+                    <img src="../images/arrow-left.webp" alt="left" />
+                </div>
+                <div class="darken1"></div>
+                <div class="darken-left1"></div>
+                <!-- arrow / -->
+            </div>
+
+            <!-- list 5 -->
+            <div class="lists-card1">
+                <div class="list-name"><b> Gündemdekiler</b></div>
+                <div class="horizontal-items sub-movies" id="scrollbar5">
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                </div>
+                <!-- arrow -->
+                <div class="arrow1" onclick="slideRight5()">
+                    <img src="../images/right-arrow.svg" alt="right" />
+                </div>
+                <div class="arrow-left1" onclick="slideLeft5()">
+                    <img src="../images/arrow-left.webp" alt="left" />
+                </div>
+                <div class="darken1"></div>
+                <div class="darken-left1"></div>
+                <!-- arrow / -->
+            </div>
+
+            <!-- list 6 -->
+            <div class="lists-card1">
+                <div class="list-name"><b> Gündemdekiler</b></div>
+                <div class="horizontal-items sub-movies" id="scrollbar6">
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                    <div class="movie"></div>
+                </div>
+                <!-- arrow -->
+                <div class="arrow1" onclick="slideRight6()">
+                    <img src="../images/right-arrow.svg" alt="right" />
+                </div>
+                <div class="arrow-left1" onclick="slideLeft6()">
+                    <img src="../images/arrow-left.webp" alt="left" />
+                </div>
+                <div class="darken1"></div>
+                <div class="darken-left1"></div>
+                <!-- arrow / -->
+            </div>
+        </div>
+    </main>
+    <!-- footer starts -->
+    <footer>
+        <div class="container-1">
+            <p>Questions? Call 1-844-505-2993</p>
+            <ul>
+                <li>FAQ</li>
+                <li>Investor Relations</li>
+                <li>Ways to Watch</li>
+                <li>Corporate Information</li>
+                <li>Only on Netflix</li>
+            </ul>
+        </div>
+        <div class="container-2">
+            <ul>
+                <li>Help Center</li>
+                <li>Jobs</li>
+                <li>Terms of Use</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div class="container-3">
+            <ul>
+                <li>Account</li>
+                <li>Redeem Gift Cards</li>
+                <li>Privacy</li>
+                <li>Speed Test</li>
+            </ul>
+        </div>
+        <div class="container-4">
+            <ul>
+                <li>Media Center</li>
+                <li>Buy Gift Cards</li>
+                <li>Cookie Preferences</li>
+                <li>example text</li>
+                <li>Legal Notices</li>
+            </ul>
+            || Cloned by iArnold
+        </div>
+    </footer>
+    <!-- footer ends -->
+    <script src="../index.js"></script>
+</body>
+
+</html>

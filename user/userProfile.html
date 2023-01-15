@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>user-profile</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Nanito Sans;
+            background-color: black !important;
+        }
+        
+        header {
+            background-image: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../images/NetflixLogoSvg (copy).svg" alt="Logo" />
+            </div>
+            <!-- humbuger menu -->
+            <div class="humbuger" id="openLines" onclick="openNav() ">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+            </div>
+
+            <!-- humburger menu / -->
+        </nav>
+        <!-- side nav -->
+        <div class="side-nav" id="sideNav">
+            <div class="logo">
+                <img src="../images/NetflixLogoSvg (copy).svg" alt="Logo" />
+                <div class="close" onclick="closeNav() ">
+                    <p>&times;</p>
+                </div>
+            </div>
+
+            <div class="user-action">
+                <div class="language">English</div>
+            </div>
+        </div>
+        <div class="side-nav2" id="sideNav2"></div>
+        <!-- side nav ends -->
+        <!-- form starts -->
+        <div class="prof-contents">
+            <div class="content">Kim izliyor?</div>
+            <div class="user-profile">
+                <div class="prof1">
+                    <img src="../images/ProfilePicture (copy).png" onclick="location.href='../user/userPage.html'" alt="" />
+                    <div class="prof-name">Murat</div>
+                </div>
+                <div class="prof2">
+                    <img src="../images/ProfilePicture (1) (copy).png" alt="" />
+                    <div class="prof-name">Umut</div>
+                </div>
+                <div class="prof3">
+                    <img src="../images/ProfilePicture (2) (copy).png" alt="" />
+                    <div class="prof-name">Kemal</div>
+                </div>
+                <div class="prof4">
+                    <img src="../images/ProfilePicture (3) (copy).png" alt="" />
+                    <div class="prof-name">Çocuk</div>
+                </div>
+                <div class="add-prof">
+                    <img src="../images/add-icon.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <!-- form ends -->
+    </header>
+    <script src="../index.js "></script>
+</body>
+
+</html>

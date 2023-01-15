@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <title>NetFlix Clone</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap");
+    </style>
+</head>
+
+<body>
+    <!-- header starts -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./images/NetflixLogoSvg (copy).svg" alt="Logo" />
+            </div>
+            <!-- humbuger menu -->
+            <div class="humbuger" id="openLines" onclick="openNav()">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+            </div>
+
+            <!-- humburger menu / -->
+            <div class="user-action">
+                <div class="language">English</div>
+                <div class="sign-in" onclick="location.href='./user/signIn.html'">
+                    Sign In
+                </div>
+            </div>
+        </nav>
+        <!-- side nav starts -->
+        <div class="side-nav" id="sideNav">
+            <div class="logo">
+                <img src="./images/NetflixLogoSvg (copy).svg" alt="Logo" />
+                <div class="close" onclick="closeNav()">
+                    <p>&times;</p>
+                </div>
+            </div>
+
+            <div class="user-action">
+                <div class="language">English</div>
+                <div class="sign-in" id="signIn" onclick="location.href='./user/signIn.html'">
+                    Sign In
+                </div>
+            </div>
+        </div>
+        <div class="side-nav2" id="sideNav2"></div>
+        <!-- side nav ends -->
+        <div class="banner">
+            <div class="head-title">
+                <h1>
+                    Unlimited movies, TV <span class="span-break">shows and more.</span>
+                </h1>
+            </div>
+            <div class="sub-title">Watch anywhere. Cancel anytime.</div>
+            <div class="get-started">
+                <strong>Ready to watch? Enter your email to create or restart your
+            membership.</strong
+          >
+          <div class="user-box">
+            <div class="email">
+              <input type="email" placeholder="Email address" />
+            </div>
+            <div class="btn" onclick="location.href='./user/signIn.html'">
+              <button>Get Started ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header ends -->
+
+    <!-- main starts -->
+    <main>
+      <!-- section 1 -->
+      <section>
+        <div class="adv-content">
+          <h2>Enjoy your TV.</h2>
+          <p>
+            Watch smart TVs, Playstation, Xbox,<span class="span-break">
+              Chromecast, Apple TV, Blueray players</span
+            >
+            <span class="span-break"> and more.</span>
+          </p>
+        </div>
+        <div class="adv-img">
+          <img src="./images/adv.png" alt="" />
+        </div>
+      </section>
+      <!-- section 2 -->
+      <section>
+        <div class="section-reverse">
+          <div class="adv-content adv-2">
+            <h2>
+              Download your shows
+              <span class="span-break">to watch offline</span>
+            </h2>
+            <p>
+              Save your favourites easily and always have
+              <span class="span-break"> have something to watch.</span>
+            </p>
+          </div>
+        </div>
+        <div class="adv-img">
+          <img src="./images/eleven-n.png" alt="image" />
+        </div>
+      </section>
+      <!-- section 3 -->
+      <section>
+        <div class="adv-content">
+          <h2>Watch everywhere.</h2>
+          <p>
+            Stream unlimited movies and TV shows on
+            <span class="span-break"
+              >your phone, tablet, laptop, and TV without </span
+            ><span class="span-break">paying more.</span>
+          </p>
+        </div>
+
+        <div class="adv-img">
+          <img class="gif" src="./images/anywhere-unscreen.gif" alt="image" />
+        </div>
+      </section>
+      <!-- section 4 -->
+      <section class="section-reverse">
+        <div class="adv-content">
+          <h2>Create profiles for kids.</h2>
+          <p>
+            Send kids on adventures with their favorite
+            <span class="span-break">characters in a space made just for </span
+            ><span class="span-break">them—free with your membership.</span>
+          </p>
+        </div>
+        <div class="adv-img">
+          <img src="./images/kids.png" alt="" />
+        </div>
+      </section>
+      <!-- section 5 -->
+      <section class="rectangle-cards">
+        <div class="adv-content">
+          <h3>Frequently Asked Questions</h3>
+        </div>
+        <div class="adv-rectangle">
+          <div class="content">What is Netflix?</div>
+          <div class="add-icon">&#x2b;</div>
+        </div>
+        <div class="adv-rectangle">
+          <div class="content">How much does Netflix cost?</div>
+          <div class="add-icon">&#x2b;</div>
+        </div>
+        <div class="adv-rectangle">
+          <div class="content">Where can I watch?</div>
+          <div class="add-icon">&#x2b;</div>
+        </div>
+        <div class="adv-rectangle">
+          <div class="content">How do I cancel?</div>
+          <div class="add-icon">&#x2b;</div>
+        </div>
+        <div class="adv-rectangle">
+          <div class="content">What can I watch on Netflix?</div>
+          <div class="add-icon">&#x2b;</div>
+        </div>
+        <div class="adv-rectangle">
+          <div class="content">Is Netflix good for kids?</div>
+          <div class="add-icon">&#x2b;</div>
+        </div>
+        <div class="get-started">
+          <strong class="content"
+            >Ready to watch? Enter your email to create or restart your
+            membership.</strong
+          >
+          <div class="user-box">
+            <div class="email">
+              <input type="email" placeholder="Email address" />
+            </div>
+            <div class="btn">
+              <button>Get Started ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- main ends -->
+    <!-- footer starts -->
+    <footer>
+      <div class="container-1">
+        <p>Questions? Call 1-844-505-2993</p>
+        <ul>
+          <li>FAQ</li>
+          <li>Investor Relations</li>
+          <li>Ways to Watch</li>
+          <li>Corporate Information</li>
+          <li>Only on Netflix</li>
+        </ul>
+      </div>
+      <div class="container-2">
+        <ul>
+          <li>Help Center</li>
+          <li>Jobs</li>
+          <li>Terms of Use</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+      <div class="container-3">
+        <ul>
+          <li>Account</li>
+          <li>Redeem Gift Cards</li>
+          <li>Privacy</li>
+          <li>Speed Test</li>
+        </ul>
+      </div>
+      <div class="container-4">
+        <ul>
+          <li>Media Center</li>
+          <li>Buy Gift Cards</li>
+          <li>Cookie Preferences</li>
+          <li>example text</li>
+          <li>Legal Notices</li>
+        </ul>
+        || Cloned by iArnold
+      </div>
+    </footer>
+    <!-- footer ends -->
+    <script src="index.js"></script>
+  </body>
+</html>

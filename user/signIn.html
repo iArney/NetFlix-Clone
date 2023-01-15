@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign-in</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Nanito Sans;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../images/NetflixLogoSvg (copy).svg" alt="Logo" />
+            </div>
+            <!-- humbuger menu -->
+            <div class="humbuger" id="openLines" onclick="openNav() ">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+            </div>
+
+            <!-- humburger menu / -->
+        </nav>
+        <!-- side nav -->
+        <div class="side-nav" id="sideNav">
+            <div class="logo">
+                <img src="../images/NetflixLogoSvg (copy).svg" alt="Logo" />
+                <div class="close" onclick="closeNav() ">
+                    <p>&times;</p>
+                </div>
+            </div>
+
+            <div class="user-action">
+                <div class="language">English</div>
+            </div>
+        </div>
+        <div class="side-nav2" id="sideNav2"></div>
+        <!-- side nav ends -->
+        <!-- form starts -->
+        <div class="user-form">
+            <form action=" ">
+                <h3>Sign In</h3>
+                <div class="credentials">
+                    <ul>
+                        <li>
+                            <input type="email" placeholder="Email or phone number " required />
+                        </li>
+                        <li>
+                            <input type="password" placeholder="password" minlength="8 " required />
+                        </li>
+                        <li>
+                            <button type="submit " onclick="location.href='../user/userProfile.html'">
+                  Sign In
+                </button>
+                        </li>
+                    </ul>
+                    <div class="about-credentials">
+                        <div class="remember-me">Remember me</div>
+                        <div class="need-help">Need help?</div>
+                    </div>
+                    <div class="new-user">
+                        New to NetFlix? <b><a href=" "> Sign Up now.</a></b>
+                    </div>
+                    <div class="captcha">
+                        This page is protected by Google reCAPTCHA to
+                        <span class="span-break">ensure you're not a bot. <a href="# "> Learn more.</a></span
+              >
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- form ends -->
+    </header>
+    <script src="../index.js "></script>
+  </body>
+</html>
